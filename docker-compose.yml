@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  bot:
+#    environment:
+#      - PYTHONPATH=/jopsbank
+    container_name: jopsbank
+    build: Jopsbank
+    #restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./logs/:/app/logs
